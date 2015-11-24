@@ -36,6 +36,12 @@ $con = getConnection();
     </thead>
     
     <?php
+    $row = mysqli_fetch_array($result);
+    echo $row;
+
+    $row = mysqli_fetch_array($result);
+    echo $row;
+
     while($row = mysqli_fetch_array($result)) {
         echo '<tr>';
         for($i = 0; $i < count($row); $i++){
