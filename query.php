@@ -21,11 +21,55 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 
 <h1>Query Database</h1>
 <div style="margin: 5px">  
-    <form method="GET" action="query.php">
+    <form method="POST" action="query.php">
         <textarea  name="query" style="font-family: consolas; font-size: larger; width: 100%; height: 100px; border: 1px solid gainsboro; padding: 5px"></textarea>
         <br />
-        <input type="submit" value="Submit" name="submit" />
+        <input type="submit"/>
     </form>
+</div>
+
+<div style="padding: 5px">
+<?php
+
+if(isset($_POST['query'])) {
+    $query = $_POST['query'];
+    $result = executeQuery($con, $query);  
+    if(!$result) {
+        die('Query failed to execute: ' . mysqli_error($con));   
+    }
+    ?>
+    <table class="bordered">
+        <thead>
+        <?php
+        $numFields = mysqli_num_fields($result);
+
+        echo '<tr>';
+        for($i = 0; $i < $numFields; $i++) {
+            $field = mysqli_fetch_field_direct($result, $i);
+            echo '<th>' . $field->name . '</th>';
+        }
+        echo '</tr>';
+        ?>
+        </thead>
+        
+        <?php        
+        $rows = array();
+        while($resultRow = mysqli_fetch_assoc($result)) {
+            $rows[] = $resultRow;
+        }
+        foreach($rows as $row) {
+            echo '<tr>';
+            foreach($row as $col) {
+                echo '<td>' . $col . '</td>';        
+            }
+            echo '</tr>';
+        }
+        
+        mysqli_free_result($result);
+
+        ?>
+
+    </table>
 </div>
 
 </body>
