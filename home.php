@@ -12,6 +12,13 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 </head>
 
 <body>
+    <div style="text-align: center; height: 70px; border-bottom: 1px solid grey">
+        <a href='index.php' style = "background: gainsboro; width: 100px; height: 25px; padding: 5px;">All Tables</a>
+        <a href='' style = "background: gainsboro; width: 100px; height: 25px; padding: 5px;">Query Database</a>
+    </div>
+
+
+
 <h1>All Tables</h1>
 <?php 
 foreach($tables as $tableName) { ?>
