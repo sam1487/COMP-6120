@@ -43,7 +43,6 @@ if(isset($_POST['query'])) {
     $query = $_POST['query'];
     
     $con->autocommit(FALSE);
-    $con->begin_transaction();
 
     $result = executeQuery($con, $query);      
     if($result == false) {
