@@ -29,8 +29,8 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 </div>
 
 <div style="padding: 5px">
-<?php
 
+<?php
 if(isset($_POST['query'])) {
     $query = $_POST['query'];
     $result = executeQuery($con, $query);  
@@ -70,6 +70,9 @@ if(isset($_POST['query'])) {
         ?>
 
     </table>
+<?php
+}
+?>
 </div>
 
 </body>
