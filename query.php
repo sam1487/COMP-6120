@@ -22,7 +22,7 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 <h1>Query Database</h1>
 <div style="margin: 5px">  
     <form method="GET" action="query.php">
-        <textarea name="query" style="width: 80%; height: 40px; border: 1px solid gainsboro; padding: 5px"></textarea>
+        <textarea name="query" style="font-family: consolas; font-size: larger; width: 100%; height: 40px; border: 1px solid gainsboro; padding: 5px"></textarea>
         <br />
         <input type="submit" value="Submit" name="submit" />
     </form>
