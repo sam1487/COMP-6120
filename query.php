@@ -38,7 +38,7 @@ if(isset($_POST['query'])) {
     $query = $_POST['query'];
     $result = executeQuery($con, $query);  
     if($result == false) {
-        die('Query failed to execute: ' . mysql_error());   
+        die('Query failed to execute: ' . mysqli_error($con));   
     }
     ?>
     <table class="bordered">

@@ -17,7 +17,6 @@ function getConnection() {
 }
 
 function executeQuery($con, $query) {
-	$con = getConnection();
 	$result = mysqli_query($con, $query);
 	return $result;
 }
