@@ -21,12 +21,12 @@ $con = getConnection();
     if(!$result) {
         die('Query failed to execute: ' . mysqli_error($con));   
     }
-    $books = mysqli_fetch_assoc($result);
-    $numFields = mysql_numfields($books);
+    //$books = mysqli_fetch_assoc($result);
+    $numFields = mysql_num_fields($result);
 
     echo '<tr>';
     for($i = 0; $i < $numFields; $i++) {
-        $fieldName = mysql_field_name($books, $i);
+        $fieldName = mysql_field_name($result, $i);
         echo '<th>' . $fieldName . '</th>\n';
     }
     echo '</tr>';
