@@ -16,7 +16,7 @@ $con = getConnection();
 $query = 'SELECT * FROM Book';
 $books = executeQuery($con, $query);  
 if(!$books) {
-    die('Query failed to execute: ' . mysql_error());   
+    die('Query failed to execute: ' . mysqli_error($con));   
 }
 echo 'ALL BOOKS<br>';
 echo $books;
