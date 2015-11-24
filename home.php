@@ -1,3 +1,7 @@
+<?php
+include 'database.php';
+$con = getConnection();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,10 +12,19 @@
 
 <body>
 
-<h2>Highlighted rows, borders</h2>
+<?php
+$query = 'SELECT * FROM Book';
+$books = executeQuery($con, $query);  
+if(!$books) {
+    die('Query failed to execute: ' . mysql_error());   
+}
+echo 'ALL BOOKS<br>';
+echo $books;
+
+?>
+<h2>Book</h2>
 <table class="bordered">
     <thead>
-
     <tr>
         <th>#</th>        
         <th>IMDB Top 10 Movies</th>

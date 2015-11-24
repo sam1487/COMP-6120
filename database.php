@@ -19,10 +19,6 @@ function getConnection() {
 funciton executeQuery($con, $query) {
 	$con = getConnection();
 	$result = mysqli_query($con, $query);
-	if(!$result) {
-		die('Query does not produce any result');
-	}
-
 	return $result;
 }
 
