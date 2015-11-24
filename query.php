@@ -50,7 +50,8 @@ if(isset($_POST['query'])) {
             die();    
         }
     }
-    
+    $query = $mysqli->real_escape_string($query);
+
     $result = executeQuery($con, $query);      
     if($result == false) {
         reportError(mysqli_error($con));
