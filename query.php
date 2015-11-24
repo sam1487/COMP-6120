@@ -41,11 +41,24 @@ function reportError($msg) {
 <?php
 if(isset($_POST['query'])) {
     $query = $_POST['query'];
-    $result = executeQuery($con, $query);  
+    
+    $con->autocommit(FALSE);
+    $con->begin_transaction();
+
+    $result = executeQuery($con, $query);      
     if($result == false) {
         reportError(mysqli_error($con));
         die();
     }
+    echo "Affected: " . $con->affected_rows;
+    if($con->affected_rows > 0) {
+        reportError("Query modifies the data! Queries like DROP, DELETE and UPDATE are not supported as they change the underlying data.");
+        $con->rollback();
+        die();
+    }
+
+    $con->commit();
+    
     ?>
     <table class="bordered">
         <thead>
