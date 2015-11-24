@@ -50,7 +50,8 @@ if(isset($_POST['query'])) {
             die();    
         }
     }
-    $query = html_entity_decode($query);
+
+    $query = htmlentities($query);
 
     $result = executeQuery($con, $query);      
     if($result == false) {
