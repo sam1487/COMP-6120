@@ -2,7 +2,7 @@
 
 /* connect to database */
 
-$dbhost = "localhost";
+$dbhost = "acadmysql.duc.auburn.edu";
 $dbuser = "szh0064";
 $dbpass = "sam1487";
 $dbname = "szh0064db";
