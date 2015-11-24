@@ -8,7 +8,7 @@ if(!$con) {
 $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject', 'Supplier');
 
 function reportError($msg) {
-    echo '<div style="background: lightred; padding: 10px; border-radius: 5px">' . $msg . '</div>';
+    echo '<div style="background: #f2dede; padding: 10px; border-radius: 5px">' . $msg . '</div>';
 }
 ?>
 
