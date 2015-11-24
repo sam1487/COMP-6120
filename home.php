@@ -12,7 +12,7 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 </head>
 
 <body>
-
+<h1>All Tables</h1>
 <?php 
 foreach($tables as $tableName) { ?>
     <h2><?= $tableName ?> </h2>
