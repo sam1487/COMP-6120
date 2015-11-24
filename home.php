@@ -14,7 +14,7 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 <body>
 
 <?php 
-foreach($tables as $tableName) {
+foreach($tables as $tableName) { ?>
     <h2>$tableName</h2>
     <table class="bordered">
         <thead>
