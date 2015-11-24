@@ -17,10 +17,11 @@ $con = getConnection();
     <thead>
     <?php
     $query = 'SELECT * FROM Book';
-    $books = executeQuery($con, $query);  
-    if(!$books) {
+    $result = executeQuery($con, $query);  
+    if(!$result) {
         die('Query failed to execute: ' . mysqli_error($con));   
     }
+    $books = mysqli_fetch_assoc($result);
     $numFields = mysql_numfields($books);
 
     echo '<tr>';
