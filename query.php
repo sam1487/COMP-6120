@@ -2,9 +2,14 @@
 include 'database.php';
 $con = getConnection();
 if(!$con) {
-    die(mysqli_error($con));
+    reportError(mysqli_error($con));
+    die();    
 }
 $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject', 'Supplier');
+
+function reportError($msg) {
+    echo '<div style="background: lightred; padding: 10px; border-radius: 5px">' . $msg . '</div>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +43,8 @@ if(isset($_POST['query'])) {
     $query = $_POST['query'];
     $result = executeQuery($con, $query);  
     if($result == false) {
-        die('Query failed to execute: ' . mysqli_error($con));   
+        reportError(mysqli_error($con));
+        die();
     }
     ?>
     <table class="bordered">
