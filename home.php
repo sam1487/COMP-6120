@@ -38,8 +38,8 @@ $con = getConnection();
     <?php
     while($row = mysqli_fetch_array($result)) {
         echo '<tr>';
-        foreach ($row as $value) {
-            echo '<td>' . $value . '</td>';
+        for($i = 0; $i < count($row); $i++){
+            echo '<td>' . $row[$i] . '</td>';        
         }
         echo '</tr>';
     }
