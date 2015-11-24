@@ -42,8 +42,8 @@ $con = getConnection();
     }
     foreach($books as $row) {
         echo '<tr>';
-        for($i = 0; $i < count($row); $i++){
-            echo '<td>' . $row[$i] . '</td>';        
+        for($row as $col){
+            echo '<td>' . $col . '</td>';        
         }
         echo '</tr>';
     }
