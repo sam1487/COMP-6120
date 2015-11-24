@@ -27,7 +27,7 @@ $con = getConnection();
     echo '<tr>';
     for($i = 0; $i < $numFields; $i++) {
         $field = mysqli_fetch_field_direct($result, $i);
-        echo '<th>' . $field->name . '</th>\n';
+        echo '<th>' . $field->name . '</th>';
     }
     echo '</tr>';
 
@@ -35,6 +35,15 @@ $con = getConnection();
     ?>
     </thead>
     
+    <?php
+    while($row = $result->fetch_array()) {
+        echo '<tr>';
+        foreach ($row as $i => $value) {
+            echo '<td>' . $value . '</td>';
+        }
+        echo '</tr>';
+    }
+    ?>
 
 </table>
 
