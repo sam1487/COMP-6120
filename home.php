@@ -36,13 +36,16 @@ $con = getConnection();
     </thead>
     
     <?php
-    while($row = $result->fetch_array()) {
+    while($row = mysqli_fetch_array($result)) {
         echo '<tr>';
-        foreach ($row as $i => $value) {
+        foreach ($row as $value) {
             echo '<td>' . $value . '</td>';
         }
         echo '</tr>';
     }
+    
+    mysqli_free_result($result);
+
     ?>
 
 </table>
@@ -52,3 +55,4 @@ $con = getConnection();
 
 </body>
 </html>
+<?php mysqli_close($con); ?>
