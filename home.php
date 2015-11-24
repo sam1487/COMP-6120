@@ -12,7 +12,7 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 </head>
 
 <body>
-    <div style="text-align: center; padding-bottom: 5px;; border-bottom: 1px solid grey">
+    <div style="text-align: center; height: 50px;; border-bottom: 1px solid grey">
         <a href='index.php' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">All Tables</a>
         <a href='' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">Query Database</a>
     </div>
