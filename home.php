@@ -36,13 +36,11 @@ $con = getConnection();
     </thead>
     
     <?php
-    $row = mysqli_fetch_array($result);
-    print_r($row);
-
-    $row = mysqli_fetch_array($result);
-    print_r($row);
-
-    while($row = mysqli_fetch_array($result)) {
+    $books = array();
+    while($row = mysqli_fetch_assoc($result)) {
+        $books[] = $row;
+    }
+    foreach($books as $row) {
         echo '<tr>';
         for($i = 0; $i < count($row); $i++){
             echo '<td>' . $row[$i] . '</td>';        
