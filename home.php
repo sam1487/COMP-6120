@@ -37,10 +37,10 @@ $con = getConnection();
     
     <?php
     $row = mysqli_fetch_array($result);
-    echo $row;
+    print_r($row);
 
     $row = mysqli_fetch_array($result);
-    echo $row;
+    print_r($row);
 
     while($row = mysqli_fetch_array($result)) {
         echo '<tr>';
