@@ -45,6 +45,6 @@ function getError($con) {
 
 	//$str = mysqli_error($con);
 	//$err = mysqli_errno($con);
-}
+
 
 ?>
