@@ -13,8 +13,8 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 
 <body>
     <div style="text-align: center; height: 70px; border-bottom: 1px solid grey">
-        <a href='index.php' style = "background: gainsboro; width: 100px; height: 25px; padding: 5px;">All Tables</a>
-        <a href='' style = "background: gainsboro; width: 100px; height: 25px; padding: 5px;">Query Database</a>
+        <a href='index.php' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 5px;">All Tables</a>
+        <a href='' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 5px;">Query Database</a>
     </div>
 
 
