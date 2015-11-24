@@ -1,6 +1,9 @@
 <?php
 include 'database.php';
 $con = getConnection();
+if(!$con) {
+    die(mysqli_error($con));
+}
 $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject', 'Supplier');
 ?>
 
@@ -34,8 +37,8 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 if(isset($_POST['query'])) {
     $query = $_POST['query'];
     $result = executeQuery($con, $query);  
-    if(!$result) {
-        die('Query failed to execute: ' . mysqli_error($con));   
+    if(!$con->error) {
+        die('Query failed to execute: ' . $con->error);   
     }
     ?>
     <table class="bordered">
