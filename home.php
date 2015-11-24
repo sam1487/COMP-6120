@@ -26,7 +26,7 @@ $con = getConnection();
 
     echo '<tr>';
     for($i = 0; $i < $numFields; $i++) {
-        $fieldName = mysqli_field_name($result, $i);
+        $fieldName = mysqli_fetch_field_direct($result, $i);
         echo '<th>' . $fieldName . '</th>\n';
     }
     echo '</tr>';
