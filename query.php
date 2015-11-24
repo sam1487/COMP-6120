@@ -51,7 +51,7 @@ if(isset($_POST['query'])) {
         }
     }
 
-    $query = htmlentities($query);
+    $query = stripcslashes($query);
 
     $result = executeQuery($con, $query);      
     if($result == false) {
