@@ -42,7 +42,7 @@ $con = getConnection();
     }
     foreach($books as $row) {
         echo '<tr>';
-        for($row as $col){
+        foreach($row as $col) {
             echo '<td>' . $col . '</td>';        
         }
         echo '</tr>';
