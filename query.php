@@ -50,7 +50,7 @@ if(isset($_POST['query'])) {
             die();    
         }
     }
-    $query = $con->real_escape_string($query);
+    $query = html_entity_decode($query);
 
     $result = executeQuery($con, $query);      
     if($result == false) {
