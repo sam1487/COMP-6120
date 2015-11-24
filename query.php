@@ -37,7 +37,7 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 if(isset($_POST['query'])) {
     $query = $_POST['query'];
     $result = executeQuery($con, $query);  
-    if($con->error) {
+    if($result == false) {
         die('Query failed to execute: ' . $con->error);   
     }
     ?>
