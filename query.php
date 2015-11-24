@@ -41,8 +41,10 @@ function reportError($msg) {
 <?php
 if(isset($_POST['query'])) {
     $query = $_POST['query'];
+    
     $q = strtolower($query);
-    if(strpos($q, 'drop') || strpos($q, 'delete') || strpos($q, 'update')) || 
+   
+    if(strpos($q, 'drop') || strpos($q, 'delete') || strpos($q, 'update') || 
         strpos($q, 'alter') || strpos($q, 'create')) {
         reportError("Query modifies the data! Queries like DROP, DELETE, UPDATE, CREATE and ALTER are not supported as they change the underlying data.");
         die();
