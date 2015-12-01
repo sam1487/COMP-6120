@@ -20,12 +20,14 @@ function reportError($msg) {
 </head>
 
 <body>
-    <div style="text-align: center; height: 60px;; border-bottom: 1px solid grey">
-    <h4>COMP-6120: Term Project</h4> by <h5>Samir Hasan (szh0064@auburn.edu)</h5>
-        <a href='index.php' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">All Tables</a>
-        <a href='' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">Query Database</a>
+    <div style="text-align: center; padding: 10px; background: lightyellow">
+        <h2 style="margin-bottom: 0;">COMP-6120: Term Project</h2><h3>Samir Hasan (szh0064@auburn.edu)</h3>
     </div>
 
+    <div style=" margin-top: 20px;width: 300px;margin-left: auto;margin-right: auto; text-align: center;">
+        <a href="index.php" style="border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">All Tables</a>
+        <a href="query.php" style="border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">Query Database</a>
+    </div>  
 
 
 <h1>Query Database</h1>
