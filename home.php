@@ -12,7 +12,8 @@ $tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject
 </head>
 
 <body>
-    <div style="text-align: center; height: 50px;; border-bottom: 1px solid grey">
+    <div style="text-align: center; height: 60px;; border-bottom: 1px solid grey">
+        <h4>COMP-6120: Term Project</h4> by <h5>Samir Hasan (szh0064@auburn.edu)</h5>
         <a href='index.php' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">All Tables</a>
         <a href='query.php' style = "border-radius: 5px; background: lightblue; width: 100px; height: 25px; padding: 10px;">Query Database</a>
     </div>
