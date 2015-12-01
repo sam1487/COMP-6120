@@ -1,7 +1,7 @@
 <?php
 include 'database.php';
 $con = getConnection();
-$tables = array('Book', 'Customer', 'OrderDetail', 'Orders', 'Shipper', 'Subject', 'Supplier');
+$tables = array('Book', 'Customer', 'Employee', 'OrderDetail', 'Orders', 'Shipper', 'Subject', 'Supplier');
 ?>
 
 <!DOCTYPE html>
